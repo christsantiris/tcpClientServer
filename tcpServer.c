@@ -35,7 +35,8 @@ void main(){
 
 	newSocket = accept(sockfd, (struct sockaddr*)&newAddr, &addr_size);
 
-	strcpy(buffer, "Hello");
+	strcpy(buffer, "Hello Client");
 	send(newSocket, buffer, strlen(buffer), 0);
+    printf("[+]Sending data to client.\n");
 	printf("[+]Closing the connection.\n");
 }
